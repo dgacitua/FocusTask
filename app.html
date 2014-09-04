@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no" />
-  <title>Building blocks demo</title>
+  <title>FocusTask</title>
   <!-- Building blocks -->
   <link rel="stylesheet" href="style/action_menu.css">
   <link rel="stylesheet" href="style/buttons.css">
@@ -229,11 +229,23 @@
       <header class="fixed">
         <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
         <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
-        <h1>Building Blocks <em>demo</em></h1>
+        <h1>FocusTask</h1>
       </header>
       <article class="scrollable header">
         <div data-type="list">
           <ul>
+          	<!-- GaciX -->
+          	<li>
+              <a id="btn-pomo" href="#">
+                <p>Pomodoro</p>
+              </a>
+            </li>
+            <li>
+              <a id="btn-task" href="#">
+                <p>Lista de Tareas</p>
+              </a>
+            </li>
+          	<!-- GaciX -->
             <li>
               <a id="btn-action-menu" href="#">
                 <p>Action menu</p>
@@ -413,6 +425,130 @@
       </div>
     </article>
   </section>
+
+  <!--···························· GaciX ····························-->
+  <section class="skin-dark" role="region" id="pomo" data-position="right">
+    <header class="fixed">
+      <a id="btn-pomo-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Pomodoro</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <header><h2>Normal</h2></header>
+      <div>
+        <button>Default</button>
+        <button class="recommend">Recommend</button>
+        <button class="danger">Danger</button>
+       </div>
+
+      <header><h2>Disabled</h2></header>
+      <div>
+        <button disabled>Default</button>
+        <a href="#" role="button" aria-disabled="true" class="recommend">Recommend</a>
+        <button disabled class="danger">Danger</button>
+      </div>
+
+      <header><h2>Disabled with dark background</h2></header>
+      <div>
+        <button disabled>Default</button>
+        <a href="#" role="button" aria-disabled="true" class="recommend">Recommend</a>
+        <button disabled class="danger">Danger</button>
+      </div>
+
+      <header><h2>Button List</h2></header>
+      <div>
+        <ul>
+          <li>
+            <button>Default</button>
+          </li>
+          <li>
+            <button disabled="disabled">Disabled</button>
+          </li>
+          <li>
+            <button class="icon icon-view">
+              View Name
+            </button>
+          </li>
+          <li>
+            <button disabled="disabled" class="icon icon-view">
+              View Name
+            </button>
+          </li>
+          <li>
+            <a role="button" class="icon icon-dialog">
+              Tuesday September 18, 2012
+            </a>
+          </li>
+          <li>
+            <a role="button" aria-disabled="true" class="icon icon-dialog">
+              Tuesday September 18, 2012
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <header><h2>Button List (compact mode)</h2></header>
+      <div>
+        <ul class="compact">
+          <li>
+            <label>Description</label>
+            <button class="icon icon-dialog">Action 1</button>
+          </li>
+          <li>
+            <label>Description</label>
+            <button class="icon icon-dialog">Action 2</button>
+          </li>
+          <li>
+            <label>This is a large description for this action</label>
+            <button class="icon icon-dialog" disabled >Action 3 (disabled)</button>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </section>
+  
+  <!-- GaciX -->
+  <section class="skin-dark" role="region" id="task" data-position="right">
+    <header class="fixed">
+      <a id="btn-task-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Lista de Tareas</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        <button id="btn-newtask">Nueva Tarea</button>
+        <button id="btn-viewtask">Ver Tareas</button>
+       </div>
+     </article>
+ 	</section>
+ 	
+  <!-- GaciX -->
+  <section class="skin-dark" role="region" id="newtask" data-position="right">
+    <header class="fixed">
+      <a id="btn-newtask-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Nueva Tarea</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        holiwi
+       </div>
+     </article>
+ 	</section>
+ 	
+  <!-- GaciX -->
+  <section class="skin-dark" role="region" id="viewtask" data-position="right">
+    <header class="fixed">
+      <a id="btn-viewtask-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Nueva Tarea</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        chai
+       </div>
+     </article>
+ 	</section>
 
   <!--·························· Action menu ··························-->
   <section id="confirm" data-position="back" class="fullscreen">
