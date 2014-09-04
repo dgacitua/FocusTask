@@ -3,7 +3,7 @@
   "description": "FocusTask es una aplicación para Firefox OS que te ayudará a mantenerte concentrado en tus objetivos e informado de tus tareas",
   "launch_path": "/app.html",
   "icons": {
-    "128":"/images/app_icon_128tf.png",
+    "128":"/images/app_icon_128.png",
     "60":"/images/app_icon_60.png"
   },
   "version": "1.0",
