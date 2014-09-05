@@ -517,30 +517,124 @@
     <article class="content scrollable header">
       <div>
         <button id="btn-newtask">Nueva Tarea</button>
-        <button id="btn-viewtask">Ver Tareas</button>
+        <button id="btn-viewtask">Ver Tareas Actuales</button>
        </div>
      </article>
  	</section>
  	
   <!-- GaciX -->
-  <section class="skin-dark" role="region" id="newtask" data-position="right">
+ 	<section class="skin-dark" role="region" id="newtask" data-position="right">
     <header class="fixed">
       <a id="btn-newtask-back" href="#"><span class="icon icon-back">back</span></a>
       <h1>Nueva Tarea</h1>
     </header>
-
     <article class="content scrollable header">
-      <div>
-        holiwi
-       </div>
-     </article>
- 	</section>
+      <form>
+        <p>
+          <input type="text" placeholder="Nombre de la Tarea" required>
+          <button type="reset">Clear</button>
+        </p>
+        
+        <p>
+        	<form role="dialog" data-type="action">
+			  <header>Estado de la Tarea</header>
+			  <menu>
+			    <button type="button">Por Hacer</button>
+			    <button type="button">Realizando</button>
+			    <button type="button">Terminada</button>
+			  </menu>
+        	</form>
+    	</p>
+
+        <p>
+          <textarea placeholder="Descripci�n de la Tarea" required></textarea>
+        </p>
+      </form>
+
+      <header><h2>Fieldset</h2></header>
+      <form>
+        <fieldset>
+          <legend class="action">Mobile</legend>
+          <section>
+            <p>
+              <input type="tel" placeholder="Phone number" required>
+              <button type="reset">Clear</button>
+            </p>
+            <p>
+              <input type="text" placeholder="Name" value="Jessy James" required>
+              <button type="reset">Clear</button>
+            </p>
+          </section>
+        </fieldset>
+
+        <fieldset>
+          <legend>Work</legend>
+          <section>
+            <p>
+              <input type="tel" placeholder="Email" required>
+              <button type="reset">Clear</button>
+            </p>
+          </section>
+        </fieldset>
+       </form>
+
+      <header><h2>Forms: Input text</h2></header>
+
+      <form role="search">
+        <p>
+          <input type="text" placeholder="Search..." required>
+          <button type="reset">Clear</button>
+        </p>
+      </form>
+
+      <form role="search">
+        <button type="submit">Cancel</button>
+        <p>
+          <input type="text" placeholder="Search..." required value="Some text here">
+          <button type="reset">Clear</button>
+        </p>
+      </form>
+
+      <form role="search" class="skin-dark">
+        <p>
+          <input type="text" placeholder="Search..." required>
+          <button type="reset">Clear</button>
+        </p>
+      </form>
+
+      <form role="search" class="skin-dark">
+        <button type="submit">Cancel</button>
+        <p>
+          <input type="text" placeholder="Search..." required value="Some text here">
+          <button type="reset">Clear</button>
+        </p>
+      </form>
+
+      <header><h2>Forms: Text area</h2></header>
+
+      <form role="search" class="bottom">
+        <!-- this button should be enabled after start typing in the input field-->
+        <button type="submit" disabled>Send</button>
+        <p>
+          <textarea required></textarea>
+        </p>
+      </form>
+
+      <form role="search" class="bottom">
+        <button class="icon icon-attachment">Attachment</button>
+        <button type="submit">Send</button>
+        <p>
+          <textarea required>Some text here</textarea>
+        </p>
+      </form>
+    </article>
+  </section>
  	
   <!-- GaciX -->
   <section class="skin-dark" role="region" id="viewtask" data-position="right">
     <header class="fixed">
       <a id="btn-viewtask-back" href="#"><span class="icon icon-back">back</span></a>
-      <h1>Nueva Tarea</h1>
+      <h1>Ver Tareas Actuales</h1>
     </header>
 
     <article class="content scrollable header">
@@ -549,6 +643,8 @@
        </div>
      </article>
  	</section>
+ 	
+ 	
 
   <!--·························· Action menu ··························-->
   <section id="confirm" data-position="back" class="fullscreen">
