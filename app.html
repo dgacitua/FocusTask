@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no" />
-  <title>Building blocks demo</title>
+  <title>FocusTask</title>
   <!-- Building blocks -->
   <link rel="stylesheet" href="style/action_menu.css">
   <link rel="stylesheet" href="style/buttons.css">
@@ -234,6 +234,18 @@
       <article class="scrollable header">
         <div data-type="list">
           <ul>
+          	<!-- GaciX -->
+          	<li>
+              <a id="btn-pomo" href="#">
+                <p>Pomodoro</p>
+              </a>
+            </li>
+            <li>
+              <a id="btn-task" href="#">
+                <p>Lista de Tareas</p>
+              </a>
+            </li>
+          	<!-- GaciX -->
             <li>
               <a id="btn-action-menu" href="#">
                 <p>Action menu</p>
@@ -413,6 +425,79 @@
       </div>
     </article>
   </section>
+
+  <!--···························· GaciX ····························-->
+  <section class="skin-dark" role="region" id="pomo" data-position="right">
+    <header class="fixed">
+      <a id="btn-pomo-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Pomodoro</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <header><h2>Holiwi</h2></header>
+      Inserte pomodoro
+    </article>
+  </section>
+  
+  <!-- GaciX -->
+  <section class="skin-dark" role="region" id="task" data-position="right">
+    <header class="fixed">
+      <a id="btn-task-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Lista de Tareas</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        <button id="btn-newtask">Nueva Tarea</button>
+        <button id="btn-viewtask">Ver Tareas Actuales</button>
+       </div>
+     </article>
+ 	</section>
+ 	
+  <!-- GaciX -->
+ 	<section class="skin-dark" role="region" id="newtask" data-position="right">
+    <header class="fixed">
+      <a id="btn-newtask-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Nueva Tarea</h1>
+    </header>
+    <article class="content scrollable header">
+      <form>
+      	<header><h2>Nombre de la Tarea</h2></header>
+        <p>
+          <input id="name" type="text" required>
+          <button type="reset">Clear</button>
+        </p>
+        <header><h2>Estado de la Tarea</h2></header>
+        <p>
+		  <select>
+		    <option id="st-todo">Por Hacer</option>
+		    <option id="st-doing">Realizando</option>
+		    <option id="st-done">Terminada</option>
+		  </select>
+    	</p>
+		<header><h2>Descripcion de la Tarea</h2></header>
+        <p>
+          <textarea id="descr"></textarea>
+        </p>
+      </form>
+    </article>
+  </section>
+ 	
+  <!-- GaciX -->
+  <section class="skin-dark" role="region" id="viewtask" data-position="right">
+    <header class="fixed">
+      <a id="btn-viewtask-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Ver Tareas Actuales</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        chai
+       </div>
+     </article>
+ 	</section>
+ 	
+ 	
 
   <!--·························· Action menu ··························-->
   <section id="confirm" data-position="back" class="fullscreen">
