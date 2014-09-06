@@ -42,7 +42,10 @@
 				//~ }
 				
 				if(repeat>7){
+					document.getElementById("stop").disabled=true;
+					document.getElementById("start").disabled=false;
 					stopCounter();
+					document.getElementById("clock").innerHTML="25:00";
 					repeat=0;
 				}else{
 					if(repeat%2==0){
@@ -68,7 +71,7 @@
 		}	
 		document.getElementById("clock").innerHTML=clock;
 		seconds--;
-		count = setTimeout(function(){counter(minutes,seconds)}, 100);
+		count = setTimeout(function(){counter(minutes,seconds)}, 10);
 	}
 	
 	function stopCounter(){
