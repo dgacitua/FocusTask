@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="style/seekbars.css">
   <link rel="stylesheet" href="style/tabs.css">
   <link rel="stylesheet" href="style/toolbars.css">
+  
+  <!-- Clock -->
+  <link rel="stylesheet" href="style/clock.css">
 
   <!-- Icons -->
   <link rel="stylesheet" href="icons/styles/action_icons.css">
@@ -212,7 +215,7 @@
       </header>
       <nav>
         <ul>
-          <li><a href="#">Usuario</a></li>
+          <li><a href="#">item 1</a></li>
           <li><a href="#">item 2</a></li>
           <li><a href="#">item 3</a></li>
         </ul>
@@ -220,7 +223,7 @@
         <ul>
           <li><a href="#">item 4</a></li>
           <li><a href="#">item 5</a></li>
-          <li><a href="#">Avanzadas</a></li>
+          <li><a href="#">item 6</a></li>
         </ul>
       </nav>
     </section>
@@ -332,7 +335,7 @@
     </section> <!-- end drawer -->
   </section> <!-- end index -->
 
-  <!--·························· Action menu ··························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Action menu Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="action-menu" data-position="back" class="fullscreen">
     <form role="dialog" data-type="action">
       <header> Title </header> <!-- this header is optional -->
@@ -345,7 +348,7 @@
     </form>
   </section>
 
-  <!--···························· Buttons ····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Buttons Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section class="skin-dark" role="region" id="buttons" data-position="right">
     <header class="fixed">
       <a id="btn-buttons-back" href="#"><span class="icon icon-back">back</span></a>
@@ -499,7 +502,92 @@
  	
  	
 
-  <!--·························· Action menu ··························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· GaciX Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
+  <section class="skin-dark" role="region" id="pomo" data-position="right">
+    <header class="fixed">
+      <a id="btn-pomo-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Pomodoro</h1>
+    </header>
+
+    <article class="content scrollable header">
+		
+<!--
+      <header><h2>Contador</h2></header>
+-->
+<!--
+      Acá va el reloj
+-->
+      <div id="clock" align="center" class="clock">25:00</div>
+<!--
+      Botones de comando del reloj de cuenta regresiva
+-->
+      <br>
+      <button id="start" class="recommend">Iniciar</button>
+      <button id="stop" class="danger" disabled>Detener</button>
+    </article>
+  </section>
+  
+  <!-- GaciX -->
+  <section class="skin-dark" role="region" id="task" data-position="right">
+    <header class="fixed">
+      <a id="btn-task-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Lista de Tareas</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        <button id="btn-newtask">Nueva Tarea</button>
+        <button id="btn-viewtask">Ver Tareas Actuales</button>
+       </div>
+     </article>
+ 	</section>
+ 	
+  <!-- GaciX -->
+ 	<section class="skin-dark" role="region" id="newtask" data-position="right">
+    <header class="fixed">
+      <a id="btn-newtask-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Nueva Tarea</h1>
+    </header>
+    <article class="content scrollable header">
+      <form>
+      	<header><h2>Nombre de la Tarea</h2></header>
+        <p>
+          <input id="name" type="text" required>
+          <button type="reset">Clear</button>
+        </p>
+        <header><h2>Estado de la Tarea</h2></header>
+        <p>
+		  <select>
+		    <option id="st-todo">Por Hacer</option>
+		    <option id="st-doing">Realizando</option>
+		    <option id="st-done">Terminada</option>
+		  </select>
+    	</p>
+		<header><h2>Descripcion de la Tarea</h2></header>
+        <p>
+          <textarea id="descr"></textarea>
+        </p>
+      </form>
+    </article>
+  </section>
+ 	
+  <!-- GaciX -->
+  <section class="skin-dark" role="region" id="viewtask" data-position="right">
+    <header class="fixed">
+      <a id="btn-viewtask-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Ver Tareas Actuales</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        chai
+       </div>
+     </article>
+ 	</section>
+ 	
+ 	
+
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Action menu Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="confirm" data-position="back" class="fullscreen">
     <form role="dialog" data-type="confirm">
       <section>
@@ -513,7 +601,7 @@
     </form>
   </section>
 
-  <!--·························· Edit mode ··························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Edit mode Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="edit-mode" data-position="edit-mode">
     <form role="dialog" data-type="edit">
     <section>
@@ -532,7 +620,7 @@
   </form>
   </section>
 
-  <!--··························· Headers ···························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Headers Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="headers" data-position="right">
     <header class="fixed">
       <a id="btn-headers-back" href="#"><span class="icon icon-back">back</span></a>
@@ -643,7 +731,7 @@
     </article>
   </section>
 
-  <!--·························· Input areas ··························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Input areas Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="input-areas" data-position="right">
     <header class="fixed">
       <a id="btn-input-areas-back" href="#"><span class="icon icon-back">back</span></a>
@@ -746,7 +834,7 @@
     </article>
   </section>
 
-  <!--····························· Switches ·····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Switches Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="switches" data-position="right">
     <header class="fixed">
       <a id="btn-switches-back" href="#"><span class="icon icon-back">back</span></a>
@@ -815,7 +903,7 @@
     </article>
   </section>
 
-  <!--····························· Lists ·····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Lists Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="lists" data-position="right">
     <header class="fixed">
       <a id="btn-lists-back" href="#"><span class="icon icon-back">back</span></a>
@@ -872,7 +960,7 @@
     </article>
   </section>
 
-  <!--···························· Progress ····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Progress Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="progress" data-position="right">
     <header class="fixed">
       <a id="btn-progress-back" href="#"><span class="icon icon-back">back</span></a>
@@ -906,7 +994,7 @@
     </article>
   </section>
 
-  <!--···························· Scrolling ····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Scrolling Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="scrolling" data-position="right">
     <header class="fixed">
       <a id="btn-scrolling-back" href="#"><span class="icon icon-back">back</span></a>
@@ -950,7 +1038,7 @@
     </article>
   </section>
 
-  <!--···························· Seek bars ····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Seek bars Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="seek-bars" data-position="right">
     <section role="region">
       <header class="fixed">
@@ -989,7 +1077,7 @@
     </section>
   </section>
 
-  <!--······························ Tabs ······························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Tabs Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="tabs" data-position="right">
     <section role="region">
       <header class="fixed">
@@ -1019,7 +1107,7 @@
     </section>
   </section>
 
-  <!--····························· Filters ·····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Filters Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="filters" data-position="right">
      <section role="region">
       <header class="fixed">
@@ -1051,7 +1139,7 @@
     </section>
   </section>
 
-  <!--···························· Toolbars ····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Toolbars Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="toolbars" data-position="right">
      <section role="region">
       <header class="fixed">
@@ -1078,6 +1166,8 @@
   <script type="text/javascript" defer src="js/status.js"></script>
   <script type="text/javascript" defer src="js/seekbars.js"></script>
   <script type="text/javascript" defer src="js/app.js"></script>
+  <script type="text/javascript" defer src="js/counter.js"></script>
+  
 
 </body>
 </html>

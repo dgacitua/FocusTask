@@ -21,6 +21,7 @@ document.querySelector('#btn-pomo-back').addEventListener ('click', function () 
   document.querySelector('#pomo').className = 'right';
   document.querySelector('[data-position="current"]').className = 'current';
 });
+
 document.querySelector('#btn-task-back').addEventListener ('click', function () {
   document.querySelector('#task').className = 'right';
   document.querySelector('[data-position="current"]').className = 'current';
@@ -33,7 +34,6 @@ document.querySelector('#btn-viewtask-back').addEventListener ('click', function
   document.querySelector('#viewtask').className = 'right';
   document.querySelector('[data-position="current"]').className = 'current';
 });
-
 
 //action menu
 document.querySelector('#btn-action-menu').addEventListener ('click', function () {

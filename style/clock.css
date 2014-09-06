@@ -1,0 +1,16 @@
+/*
+ ------------------------------------
+ * Layout.css will allow us creating
+ * easy structures using flexbox.
+ * This file will replace lists.css
+ * ------------------------------------ 
+*/
+
+div {
+/*
+	text-align: center;
+*/
+	color: #FF0000;
+	font-size: 30px;
+	
+}
