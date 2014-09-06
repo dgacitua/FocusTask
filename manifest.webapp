@@ -15,7 +15,10 @@
   
   "permissions": {
     "desktop-notification": {
-      "description": "To show notifications"
+      "description": "Para mostrar alertas de Pomodoro"
+    },
+    "storage": {
+      "description": "Para guardar notificaciones de la Lista de Tareas"
     }
   }
 }

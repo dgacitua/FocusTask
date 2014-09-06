@@ -204,7 +204,7 @@
     }
   </style>
 </head>
-<body>
+<body onload="initializeDB();">
   <section id="index" data-position="current">
     <section data-type="sidebar">
       <header>
@@ -561,6 +561,9 @@
  	<section class="skin-dark" role="region" id="newtask" data-position="right">
     <header class="fixed">
       <a id="btn-newtask-back" href="#"><span class="icon icon-back">back</span></a>
+      <menu type="toolbar">
+		<button id="btn-newtask-save"><span class="icon icon-add">Guardar</span></button>
+	  </menu>
       <h1>Nueva Tarea</h1>
     </header>
     <article class="content scrollable header">
@@ -594,8 +597,7 @@
     </header>
 
     <article class="content scrollable header">
-      <div>
-        chai
+       <div id="task-list">
        </div>
      </article>
  	</section>
@@ -1241,7 +1243,7 @@
   <script type="text/javascript" defer src="js/seekbars.js"></script>
   <script type="text/javascript" defer src="js/app.js"></script>
   <script type="text/javascript" defer src="js/counter.js"></script>
-  
+  <script type="text/javascript" defer src="js/database.js"></script>
 
 </body>
 </html>
