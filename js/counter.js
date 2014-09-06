@@ -8,6 +8,7 @@
 	
 	if(start){
 		start.onclick = function(){
+			notifier("Iniciando sesión completa","Concéntrate");
 			document.getElementById("start").disabled=true;
 			document.getElementById("stop").disabled=false;
 			counter(25,0);
@@ -22,6 +23,7 @@
 		stop.onclick = function(){
 			document.getElementById("stop").disabled=true;
 			document.getElementById("start").disabled=false;
+			notifier("Has detenido la sesión completa","Presiona iniciar para empezar de nuevo");
 			stopCounter();
 			repeat=0;
 			document.getElementById("clock").innerHTML="25:00";
@@ -42,6 +44,7 @@
 				//~ }
 				
 				if(repeat>6){
+					notifier("Fin de la sesión de Pomodoro","Presiona iniciar para otra sesión");
 					document.getElementById("stop").disabled=true;
 					document.getElementById("start").disabled=false;
 					stopCounter();
@@ -49,9 +52,11 @@
 					repeat=0;
 				}else{
 					if(repeat%2==0){
+						notifier("Iniciando tiempo de trabajo","Concéntrate");
 						counter(25,0);
 						repeat++;
 					}else{
+						notifier("Iniciando tiempo de descanso","Relájate");
 						counter(5,0);
 						repeat++;
 					}
@@ -81,34 +86,30 @@
 
 
 
-	var addNotification = document.querySelector("#add-notification");
-    if (addNotification) {
-        addNotification.onclick = function () {
-            if ("Notification" in window) {
-                // Firefox OS 1.1 and higher
-                if (Notification.permission !== "denied") {
-                    Notification.requestPermission(function (permission) {
-                        if(!("permission" in Notification)) {
-                            Notification.permission = permission;
-                        }
-                    });
-                }
-
-                if (Notification.permission === "granted") {
-                    new Notification("See this", {
-                        body : "This is a notification"
-                    });
-                }
+    function notifier(title,message) {
+        if ("Notification" in window) {
+            // Firefox OS 1.1 and higher
+            if (Notification.permission !== "denied") {
+                Notification.requestPermission(function (permission) {
+                    if(!("permission" in Notification)) {
+                        Notification.permission = permission;
+                    }
+                });
             }
-            else {
-                // Firefox OS 1.0
-                var notify = navigator.mozNotification.createNotification(
-                    "See this",
-                    "This is a notification"
-                );
-                notify.show();
+            if (Notification.permission === "granted") {
+                new Notification(title, {
+                    body : message
+                });
             }
-        };
+        }
+        else {
+            // Firefox OS 1.0
+            var notify = navigator.mozNotification.createNotification(
+                title,
+                message
+            );
+            notify.show();
+        }
     }
     
     
