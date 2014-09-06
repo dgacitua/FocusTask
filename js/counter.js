@@ -1,6 +1,8 @@
 "use strict";
 (function () {
 
+	var count;
+
 	var start = document.querySelector("#start");
 	
 	if(start){
@@ -19,7 +21,7 @@
 		stop.onclick = function(){
 			document.getElementById("stop").disabled=true;
 			document.getElementById("start").disabled=false;
-
+			stopCounter();
 			
 			//~ document.getElementById("clock").innerHTML="";
 			
@@ -40,10 +42,12 @@
 		var clock = minutes+':'+seconds;
 		document.getElementById("clock").innerHTML=clock;
 		seconds--;
-		setTimeout(function(){counter(minutes,seconds)}, 1000);
+		count = setTimeout(function(){counter(minutes,seconds)}, 1000);
 	}
 	
-		
+	function stopCounter(){
+		clearTimeout(count);
+	}
 	
 })();
 
