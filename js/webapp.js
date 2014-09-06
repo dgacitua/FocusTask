@@ -256,7 +256,8 @@
 
 
     // Notifications
-    var addNotification = document.querySelector("#add-notification");
+    var addNotification = false; //document.querySelector("#add-notification");
+    var message = "";
     if (addNotification) {
         addNotification.onclick = function () {
             if ("Notification" in window) {
@@ -270,8 +271,8 @@
                 }
 
                 if (Notification.permission === "granted") {
-                    new Notification("See this", {
-                        body : "This is a notification"
+                    new Notification("¡Alerta!", {
+                        body : message
                     });
                 }
             }

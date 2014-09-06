@@ -36,6 +36,8 @@
 				if(repeat%2==0){
 					counter(25,0);
 					repeat++;
+					message = "¡Ha terminado el descanso!";
+					addNotification = true;
 				}else{
 					counter(5,0);
 					repeat++;
