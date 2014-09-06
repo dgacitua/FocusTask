@@ -77,14 +77,41 @@
 	function stopCounter(){
 		clearTimeout(count);
 	}
-	
-	//~ function decision(work){
-		//~ if(work==1){
-			//~ counter(10,0);
-		//~ }else{
-			//~ counter(5,0);
-		//~ }
-	//~ }
+
+
+
+
+	var addNotification = document.querySelector("#add-notification");
+    if (addNotification) {
+        addNotification.onclick = function () {
+            if ("Notification" in window) {
+                // Firefox OS 1.1 and higher
+                if (Notification.permission !== "denied") {
+                    Notification.requestPermission(function (permission) {
+                        if(!("permission" in Notification)) {
+                            Notification.permission = permission;
+                        }
+                    });
+                }
+
+                if (Notification.permission === "granted") {
+                    new Notification("See this", {
+                        body : "This is a notification"
+                    });
+                }
+            }
+            else {
+                // Firefox OS 1.0
+                var notify = navigator.mozNotification.createNotification(
+                    "See this",
+                    "This is a notification"
+                );
+                notify.show();
+            }
+        };
+    }
+    
+    
 	
 	 
 })();

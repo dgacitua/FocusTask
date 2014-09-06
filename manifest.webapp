@@ -11,5 +11,11 @@
     "name": "CGL USACH",
     "url": "http://sitios.diinf.usach.cl/cgl/"
   },
-  "default_locale": "es"
+  "default_locale": "es",
+  
+  "permissions": {
+    "desktop-notification": {
+      "description": "To show notifications"
+    }
+  }
 }
