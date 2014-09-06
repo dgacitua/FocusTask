@@ -33,12 +33,25 @@
 		if(seconds<0){
 			if(minutes==0){
 				stopCounter();
-				if(repeat%2==0){
-					counter(25,0);
-					repeat++;
+				//~ if(repeat%2==0){
+					//~ counter(25,0);
+					//~ repeat++;
+				//~ }else{
+					//~ counter(5,0);
+					//~ repeat++;
+				//~ }
+				
+				if(repeat>7){
+					stopCounter();
+					repeat=0;
 				}else{
-					counter(5,0);
-					repeat++;
+					if(repeat%2==0){
+						counter(25,0);
+						repeat++;
+					}else{
+						counter(5,0);
+						repeat++;
+					}
 				}
 				
 				var clock = '0:00';
