@@ -26,6 +26,7 @@
 			notifier("Has detenido la sesión completa","Presiona iniciar para empezar de nuevo");
 			stopCounter();
 			repeat=0;
+			document.getElementById("clock").style="color:#FF0000"
 			document.getElementById("clock").innerHTML="25:00";
 			
 		}
@@ -48,16 +49,19 @@
 					document.getElementById("stop").disabled=true;
 					document.getElementById("start").disabled=false;
 					stopCounter();
+					document.getElementById("clock").style="color:#FF0000"
 					document.getElementById("clock").innerHTML="25:00";
 					repeat=0;
 				}else{
 					if(repeat%2==0){
 						notifier("Iniciando tiempo de trabajo","Concéntrate");
 						counter(25,0);
+						document.getElementById("clock").style="color:#FF0000"
 						repeat++;
 					}else{
 						notifier("Iniciando tiempo de descanso","Relájate");
 						counter(5,0);
+						document.getElementById("clock").style="color:#00FF00"
 						repeat++;
 					}
 				}
