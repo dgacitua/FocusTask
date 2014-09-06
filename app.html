@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no" />
-  <title>Building blocks demo</title>
+  <title>FocusTask</title>
   <!-- Building blocks -->
   <link rel="stylesheet" href="style/action_menu.css">
   <link rel="stylesheet" href="style/buttons.css">
@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="style/seekbars.css">
   <link rel="stylesheet" href="style/tabs.css">
   <link rel="stylesheet" href="style/toolbars.css">
+  
+  <!-- Clock -->
+  <link rel="stylesheet" href="style/clock.css">
 
   <!-- Icons -->
   <link rel="stylesheet" href="icons/styles/action_icons.css">
@@ -205,22 +208,16 @@
   <section id="index" data-position="current">
     <section data-type="sidebar">
       <header>
+      	<!-- GaciX -->
         <menu type="toolbar">
-          <a href="#">Done</a>
+          <a href="#">Listo</a>
         </menu>
-        <h1>Opciones</h1>
+        <h1>Información</h1>
       </header>
       <nav>
         <ul>
-          <li><a href="#">Usuario</a></li>
-          <li><a href="#">item 2</a></li>
-          <li><a href="#">item 3</a></li>
-        </ul>
-        <h2>This is a subtitle</h2>
-        <ul>
-          <li><a href="#">item 4</a></li>
-          <li><a href="#">item 5</a></li>
-          <li><a href="#">Avanzadas</a></li>
+          <li><a id="btn-help" href="#">Ayuda</a></li>
+          <li><a id="btn-about" href="#">Acerca de</a></li>
         </ul>
       </nav>
     </section>
@@ -234,6 +231,19 @@
       <article class="scrollable header">
         <div data-type="list">
           <ul>
+          	<!-- GaciX -->
+          	<li>
+              <a id="btn-pomo" href="#">
+                <p>Pomodoro</p>
+              </a>
+            </li>            
+            <li>
+              <a id="btn-task" href="#">
+                <p>Lista de Tareas</p>
+              </a>
+            </li>
+          	<!-- GaciX -->
+          	<!--
             <li>
               <a id="btn-action-menu" href="#">
                 <p>Action menu</p>
@@ -313,14 +323,14 @@
               <a id="btn-toolbars" href="#">
                 <p>Toolbars</p>
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </article>
     </section> <!-- end drawer -->
   </section> <!-- end index -->
 
-  <!--·························· Action menu ··························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Action menu Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="action-menu" data-position="back" class="fullscreen">
     <form role="dialog" data-type="action">
       <header> Title </header> <!-- this header is optional -->
@@ -333,7 +343,7 @@
     </form>
   </section>
 
-  <!--···························· Buttons ····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Buttons Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section class="skin-dark" role="region" id="buttons" data-position="right">
     <header class="fixed">
       <a id="btn-buttons-back" href="#"><span class="icon icon-back">back</span></a>
@@ -414,7 +424,244 @@
     </article>
   </section>
 
-  <!--·························· Action menu ··························-->
+  <!--···························· GaciX ····························-->
+<!--
+  <section class="skin-dark" role="region" id="pomo" data-position="right">
+    <header class="fixed">
+      <a id="btn-pomo-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Pomodoro</h1>
+    </header>
+
+    <article class="content scrollable header">
+    	-->
+<!--
+      <header><h2>Holiwi</h2></header>
+-->
+<!--
+      <div class="clock" align="center">25:00</div>
+      <br>
+      <button id="start" class="recommend">Iniciar</button>
+      <button id="stop" class="danger" disabled>Detener</button>
+    
+    </article>
+  </section>
+-->
+
+  
+  <!-- GaciX -->
+<!--
+  <section class="skin-dark" role="region" id="task" data-position="right">
+    <header class="fixed">
+      <a id="btn-task-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Lista de Tareas</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        <button id="btn-newtask">Nueva Tarea</button>
+        <button id="btn-viewtask">Ver Tareas Actuales</button>
+       </div>
+     </article>
+ 	</section>
+-->
+ 	
+  <!-- GaciX -->
+<!--
+ 	<section class="skin-dark" role="region" id="newtask" data-position="right">
+    <header class="fixed">
+      <a id="btn-newtask-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Nueva Tarea</h1>
+    </header>
+    <article class="content scrollable header">
+      <form>
+      	<header><h2>Nombre de la Tarea</h2></header>
+        <p>
+          <input id="name" type="text" required>
+          <button type="reset">Clear</button>
+        </p>
+        <header><h2>Estado de la Tarea</h2></header>
+        <p>
+		  <select>
+		    <option id="st-todo">Por Hacer</option>
+		    <option id="st-doing">Realizando</option>
+		    <option id="st-done">Terminada</option>
+		  </select>
+    	</p>
+		<header><h2>Descripcion de la Tarea</h2></header>
+        <p>
+          <textarea id="descr"></textarea>
+        </p>
+      </form>
+    </article>
+  </section>
+-->
+ 	
+  <!-- GaciX -->
+<!--
+  <section class="skin-dark" role="region" id="viewtask" data-position="right">
+    <header class="fixed">
+      <a id="btn-viewtask-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Ver Tareas Actuales</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        chai
+       </div>
+     </article>
+ 	</section>
+-->
+ 	
+ 	
+
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· GaciX Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
+  <section class="skin-dark" role="region" id="pomo" data-position="right">
+    <header class="fixed">
+      <a id="btn-pomo-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Pomodoro</h1>
+    </header>
+
+    <article class="content scrollable header">
+		
+<!--
+      <header><h2>Contador</h2></header>
+-->
+<!--
+      Acá va el reloj
+-->
+      <div id="clock" align="center" class="clock">25:00</div>
+<!--
+      Botones de comando del reloj de cuenta regresiva
+-->
+      <br>
+      <button id="start" class="recommend">Iniciar</button>
+      <button id="stop" class="danger" disabled>Detener</button>
+<!--
+      <button id="add-notification" class="danger">NOTIFICAR</button>
+-->
+    </article>
+  </section>
+  
+  <!-- GaciX -->
+  <section class="skin-dark" role="region" id="task" data-position="right">
+    <header class="fixed">
+      <a id="btn-task-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Lista de Tareas</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        <button id="btn-newtask">Nueva Tarea</button>
+        <button id="btn-viewtask">Ver Tareas Actuales</button>
+       </div>
+     </article>
+ 	</section>
+ 	
+  <!-- GaciX -->
+ 	<section class="skin-dark" role="region" id="newtask" data-position="right">
+    <header class="fixed">
+      <a id="btn-newtask-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Nueva Tarea</h1>
+    </header>
+    <article class="content scrollable header">
+      <form>
+      	<header><h2>Nombre de la Tarea</h2></header>
+        <p>
+          <input id="name" type="text" required>
+          <button type="reset">Clear</button>
+        </p>
+        <header><h2>Estado de la Tarea</h2></header>
+        <p>
+		  <select>
+		    <option id="st-todo">Por Hacer</option>
+		    <option id="st-doing">Realizando</option>
+		    <option id="st-done">Terminada</option>
+		  </select>
+    	</p>
+		<header><h2>Descripcion de la Tarea</h2></header>
+        <p>
+          <textarea id="descr"></textarea>
+        </p>
+      </form>
+    </article>
+  </section>
+ 	
+  <!-- GaciX -->
+  <section class="skin-dark" role="region" id="viewtask" data-position="right">
+    <header class="fixed">
+      <a id="btn-viewtask-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Ver Tareas Actuales</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        chai
+       </div>
+     </article>
+ 	</section>
+ 	
+ 	<!-- GaciX -->
+  <section class="skin-dark" role="region" id="task" data-position="right">
+    <header class="fixed">
+      <a id="btn-task-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Lista de Tareas</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        <button id="btn-newtask">Nueva Tarea</button>
+        <button id="btn-viewtask">Ver Tareas Actuales</button>
+       </div>
+     </article>
+ 	</section>
+ 	
+ 	<!-- GaciX -->
+  <section class="skin-dark" role="region" id="about" data-position="right">
+    <header class="fixed">
+      <a id="btn-about-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Acerca de</h1>
+    </header>
+
+    <article class="content scrollable header">
+      <div>
+        <FONT COLOR="#B43104"><h1 align="center">Acerca de esta aplicaci�n</h1></FONT>
+		<FONT COLOR="#B43104"><p align="justify">Esta es una aplicaci�n creada por Daniel Gacit�a, Robinson Oyarz�n y Ricardo Abarza en el marco de la hackacton de Firefox en la Universidad de Santiago al 6 de Septiembre de 2014. Esta aplicaci�n esta bajo licencia GPLv3.</p></FONT>
+		<FONT COLOR="#B43104"><h3>Sobre nosotros</h3></FONT>
+		<FONT COLOR="#B43104"><p align="justify">Somos un grupo de j�venes parte de la comunidad GNU/Linux de la Universidad de Santiago de Chile la cual se esfuerza para difundir el software libre. Puedes visitar nuestro sitio web haciendo clic en la im�gen de abajo. Te agradecemos por descargar esta app, si quieres colaborar puedes ayudar viendo el codigo en <a href="https://github.com/GaciX/FocusTask" target="_blank">GitHub</a>. </FONT>
+		</p>
+		<div align="center"><a href="http://sitios.diinf.usach.cl/cgl/" target="_blank"><img src="pinguinocgl.png"></a></div>
+		<hr />
+       </div>
+     </article>
+ 	</section>
+ 	
+ 	<!-- GaciX -->
+  <section class="skin-dark" role="region" id="help" data-position="right">
+    <header class="fixed">
+      <a id="btn-help-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Acerca de</h1>
+    </header>
+
+    <article class="content scrollable header">
+      	<FONT COLOR=#B43104><h1 align="center">Como usar FocusTask</h1></FONT>
+		<FONT COLOR=#B43104><p align="justify">FocusTask utiliza la t�cnica de Pomodoro para que puedas enfocarte en tus actividades. Lo �nico que tienes que hacer es:</p></FONT>
+		<ol>
+		<li><FONT COLOR=#B43104>Definir una tarea a hacer.</FONT></li>
+		<li><FONT COLOR=#B43104>Iniciar el pomodoro en el menu principal.</FONT></li>
+		<li><FONT COLOR=#B43104>Trabajar en la tarea hasta que termine el tiempo.</FONT></li>
+		<li><FONT COLOR=#B43104>Tomar un descanzo de 5 minutos.</FONT></li>
+		<li><FONT COLOR=#B43104>Continua con la tarea o inicia una nueva.</FONT></li>
+		</ol>
+		<FONT COLOR=#B43104><p align="justify">El pomodoro autom�ticamente se inicia con 25 min de trabajo y 5 min de descanzo. Al terminar el tiempo comienza autom�ticamente otra sesi�n con el mismo tiempo. Luego de 4 sesiones se detiene por completo. Si frenas el pomodoro se pierde el conteo previo.</p></FONT>
+		<FONT COLOR=#B43104><h3>M�s Informac�on</h3></FONT>
+		<FONT COLOR=#B43104><p align="justify">Si quieres saber m�s sobre esta t�cnica, puedes visitar su p�gina oficial.</FONT></p>
+		<div align="center"><a href="http://pomodorotechnique.com/" target="_blank"><img src="ico-pomodoro.png"></a></div>
+		<hr />
+     </article>
+ 	</section>
+ 	
+
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Action menu Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="confirm" data-position="back" class="fullscreen">
     <form role="dialog" data-type="confirm">
       <section>
@@ -428,7 +675,7 @@
     </form>
   </section>
 
-  <!--·························· Edit mode ··························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Edit mode Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="edit-mode" data-position="edit-mode">
     <form role="dialog" data-type="edit">
     <section>
@@ -447,7 +694,7 @@
   </form>
   </section>
 
-  <!--··························· Headers ···························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Headers Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="headers" data-position="right">
     <header class="fixed">
       <a id="btn-headers-back" href="#"><span class="icon icon-back">back</span></a>
@@ -558,7 +805,7 @@
     </article>
   </section>
 
-  <!--·························· Input areas ··························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Input areas Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="input-areas" data-position="right">
     <header class="fixed">
       <a id="btn-input-areas-back" href="#"><span class="icon icon-back">back</span></a>
@@ -661,7 +908,7 @@
     </article>
   </section>
 
-  <!--····························· Switches ·····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Switches Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="switches" data-position="right">
     <header class="fixed">
       <a id="btn-switches-back" href="#"><span class="icon icon-back">back</span></a>
@@ -730,7 +977,7 @@
     </article>
   </section>
 
-  <!--····························· Lists ·····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Lists Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="lists" data-position="right">
     <header class="fixed">
       <a id="btn-lists-back" href="#"><span class="icon icon-back">back</span></a>
@@ -787,7 +1034,7 @@
     </article>
   </section>
 
-  <!--···························· Progress ····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Progress Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="progress" data-position="right">
     <header class="fixed">
       <a id="btn-progress-back" href="#"><span class="icon icon-back">back</span></a>
@@ -821,7 +1068,7 @@
     </article>
   </section>
 
-  <!--···························· Scrolling ····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Scrolling Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="scrolling" data-position="right">
     <header class="fixed">
       <a id="btn-scrolling-back" href="#"><span class="icon icon-back">back</span></a>
@@ -865,7 +1112,7 @@
     </article>
   </section>
 
-  <!--···························· Seek bars ····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Seek bars Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section role="region" id="seek-bars" data-position="right">
     <section role="region">
       <header class="fixed">
@@ -904,7 +1151,7 @@
     </section>
   </section>
 
-  <!--······························ Tabs ······························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Tabs Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="tabs" data-position="right">
     <section role="region">
       <header class="fixed">
@@ -934,7 +1181,7 @@
     </section>
   </section>
 
-  <!--····························· Filters ·····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Filters Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="filters" data-position="right">
      <section role="region">
       <header class="fixed">
@@ -966,7 +1213,7 @@
     </section>
   </section>
 
-  <!--···························· Toolbars ····························-->
+  <!--Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â· Toolbars Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·-->
   <section id="toolbars" data-position="right">
      <section role="region">
       <header class="fixed">
@@ -993,6 +1240,8 @@
   <script type="text/javascript" defer src="js/status.js"></script>
   <script type="text/javascript" defer src="js/seekbars.js"></script>
   <script type="text/javascript" defer src="js/app.js"></script>
+  <script type="text/javascript" defer src="js/counter.js"></script>
+  
 
 </body>
 </html>
