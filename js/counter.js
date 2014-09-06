@@ -23,7 +23,7 @@
 			document.getElementById("stop").disabled=true;
 			document.getElementById("start").disabled=false;
 			stopCounter();
-			
+			repeat=0;
 			document.getElementById("clock").innerHTML="25:00";
 			
 		}
@@ -41,7 +41,7 @@
 					//~ repeat++;
 				//~ }
 				
-				if(repeat>7){
+				if(repeat>6){
 					document.getElementById("stop").disabled=true;
 					document.getElementById("start").disabled=false;
 					stopCounter();
