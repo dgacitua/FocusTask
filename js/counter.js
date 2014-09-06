@@ -23,7 +23,7 @@
 			document.getElementById("start").disabled=false;
 			stopCounter();
 			
-			//~ document.getElementById("clock").innerHTML="";
+			document.getElementById("clock").innerHTML="";
 			
 		}
 	}
@@ -49,6 +49,11 @@
 		clearTimeout(count);
 	}
 	
+	function changeColor(){
+		
+	}
+	
+	 
 })();
 
 //~ function counter(minutes,seconds){
