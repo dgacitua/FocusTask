@@ -2,6 +2,7 @@
 (function () {
 
 	var count;
+	var repeat=0;
 
 	var start = document.querySelector("#start");
 	
@@ -10,8 +11,6 @@
 			document.getElementById("start").disabled=true;
 			document.getElementById("stop").disabled=false;
 			counter(25,0);
-			//~ var btnstart = document.getElementById("start");
-			//~ btnstart="disabled";
 		}
 	}
 	
@@ -23,7 +22,7 @@
 			document.getElementById("start").disabled=false;
 			stopCounter();
 			
-			document.getElementById("clock").innerHTML="";
+			document.getElementById("clock").innerHTML="25:00";
 			
 		}
 	}
@@ -55,14 +54,3 @@
 	
 	 
 })();
-
-//~ function counter(minutes,seconds){
-	//~ if(seconds==0){
-		//~ seconds=59;
-		//~ minutes--;
-	//~ }
-	//~ var clock = minutes+':'+seconds;
-	//~ document.getElementBiId("clock").innerHTML=clock;
-		//~ 
-	//~ seconds--;
-//~ }
