@@ -24,7 +24,7 @@ document.querySelector('#btn-help').addEventListener ('click', function () {
   document.querySelector('[data-position="current"]').className = 'left';
 });
 
-
+// GaciX
 document.querySelector('#btn-pomo-back').addEventListener ('click', function () {
   document.querySelector('#pomo').className = 'right';
   document.querySelector('[data-position="current"]').className = 'current';
@@ -51,35 +51,9 @@ document.querySelector('#btn-about-back').addEventListener ('click', function ()
   document.querySelector('[data-position="current"]').className = 'current';
 });
 
+// GaciX
 document.querySelector('#btn-newtask-save').addEventListener ('click', function () {
-  //document.querySelector('#about').className = 'right';
-  //document.querySelector('[data-position="current"]').className = 'current';
-  $("#task-list").html("");
-  //Read the notes
-  var transaction = db.transaction([ 'notes' ]);
-  var store = transaction.objectStore('notes');
-
-  // open a cursor to retrieve all items from the 'notes' store
-  store.openCursor().onsuccess = function (e) {
-	  var cursor = e.target.result;
-	  if (cursor) {
-	    var value = cursor.value;var taskTitle = $("<h3/>").text(value.title);
-		var taskStatus = $("<h4/>").text(value.status);
-		var taskNotes = $("<p/>").text(value.notes);
-		noteElement.append(taskTitle);
-		noteElement.append(taskStatus);
-		noteElement.append(taskNotes);
-		/*var h3NoteTitle = $("<h3/>").text(value.title);
-		var pNoteDetails = $("<p/>").text(value.details);
-		noteElement.append(h3NoteTitle);
-		noteElement.append(pNoteDetails);*/
-		$("#task-list").append(noteElement);
-	 
-	    // move to the next item in the cursor
-		cursor.continue();
-	  }
-	  $('div[data-role=collapsible]').collapsible({refresh:true});
-	};
+  addNote();
 });
 
 //action menu

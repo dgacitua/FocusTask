@@ -204,7 +204,7 @@
     }
   </style>
 </head>
-<body onload="initializeDB();">
+<body>
   <section id="index" data-position="current">
     <section data-type="sidebar">
       <header>
@@ -570,20 +570,20 @@
       <form>
       	<header><h2>Nombre de la Tarea</h2></header>
         <p>
-          <input id="name" type="text" required>
+          <input id="taskname" type="text" required>
           <button type="reset">Clear</button>
         </p>
         <header><h2>Estado de la Tarea</h2></header>
         <p>
-		  <select>
-		    <option id="st-todo">Por Hacer</option>
-		    <option id="st-doing">Realizando</option>
-		    <option id="st-done">Terminada</option>
+		  <select id="status">
+		    <option value="todo">Por Hacer</option>
+		    <option value="doing">Realizando</option>
+		    <option value="done">Terminada</option>
 		  </select>
     	</p>
 		<header><h2>Descripcion de la Tarea</h2></header>
         <p>
-          <textarea id="descr"></textarea>
+          <textarea id="notes"></textarea>
         </p>
       </form>
     </article>
@@ -1241,9 +1241,10 @@
 
   <script type="text/javascript" defer src="js/status.js"></script>
   <script type="text/javascript" defer src="js/seekbars.js"></script>
-  <script type="text/javascript" defer src="js/app.js"></script>
   <script type="text/javascript" defer src="js/counter.js"></script>
-  <script type="text/javascript" defer src="js/database.js"></script>
+  <script type="text/javascript" defer src="js/app.js"></script>
+  <script type="text/javascript" defer src="js/db.js"></script>
+ 
 
 </body>
 </html>
