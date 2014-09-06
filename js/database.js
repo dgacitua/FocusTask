@@ -90,7 +90,7 @@ $(document).ready(function(){
 	    });
 		
 		//Click Handlers for Add Notes page
-		$("#btnSaveNote").click(function(){
+		$("#btn-newtask-save").click(function(){
 		  // GaciX
 		  taskTitle = $("#taskTitle").val();
 		  taskStatus = $("#taskStatus").val(); 
@@ -123,6 +123,7 @@ $(document).ready(function(){
 	    });
 		
 		$("#btnClearNotes").click(function(){
+		  // GaciX
 		  $("#taskTitle").val("");
 		  $("#taskStatus").val(""); 
 		  $("#taskNotes").val("");
