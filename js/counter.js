@@ -80,7 +80,7 @@
 		}	
 		document.getElementById("clock").innerHTML=clock;
 		seconds--;
-		count = setTimeout(function(){counter(minutes,seconds)}, 10);
+		count = setTimeout(function(){counter(minutes,seconds)}, 1000);
 	}
 	
 	function stopCounter(){
