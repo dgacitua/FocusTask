@@ -15,13 +15,15 @@ document.addEventListener("DOMContentLoaded", function() {
     //No support? Go in the corner and pout.
     if(!indexedDBOk) return;
  
-    var openRequest = indexedDB.open("idarticle_people",1);
+    var openRequest = indexedDB.open("FocusTask-tasklist",1);
  
     openRequest.onupgradeneeded = function(e) {
         var thisDB = e.target.result;
  
         if(!thisDB.objectStoreNames.contains("tasks")) {
-            thisDB.createObjectStore("tasks", {autoIncrement:true});
+            var os = thisDB.createObjectStore("tasks", {autoIncrement:true});
+            //I want to get by name later
+			os.createIndex("status", "taskStatus", {unique:false});
         }
     }
  
@@ -34,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector("#btn-newtask-save").addEventListener("click", addTask, false);
         
         //Listen for get clicks
-		document.querySelector("#btn-viewtask").addEventListener("click", getTasks, false);
+		document.querySelector("#btn-viewtask").addEventListener("click", getAllTasks, false);
     }
  
     openRequest.onerror = function(e) {
@@ -77,21 +79,7 @@ function addTask(e) {
 
 
 /* Operaciones de Lectura */
-var transaction = db.transaction(["tasks"], "readonly");
-var objectStore = transaction.objectStore("tasks");
- 
-var cursor = objectStore.openCursor();
- 
-cursor.onsuccess = function(e) {
-    var res = e.target.result;
-    if(res) {
-        console.log("Llave", res.key);
-        console.dir("Valor", res.value);
-        res.continue();
-    }
-}
-
-function getTasks(e) {
+function getAllTasks(e) {
  
     var s = "";
  
