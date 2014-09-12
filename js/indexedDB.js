@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
  
         if(!thisDB.objectStoreNames.contains("tasks")) {
             var os = thisDB.createObjectStore("tasks", {autoIncrement:true});
-            //I want to get by name later
-			os.createIndex("status", "taskStatus", {unique:false});
+            os.createIndex("status", "taskStatus", {unique:false});
         }
     }
  
@@ -65,34 +64,44 @@ function addTask(e) {
     }
  
     //Perform the add
-    var request = store.add(taskEntry);
- 
-    request.onerror = function(e) {
-        console.log("¡ERROR GRAVE!",e.target.error.name);
-        //some type of error handler
-    }
- 
-    request.onsuccess = function(e) {
-        console.log("Se agregó "+taskName+" con éxito!");
-    }
+    var request;
+    
+    if (taskName) {
+    	request = store.add(taskEntry);
+	    
+	    request.onerror = function(e) {
+	        console.log("¡ERROR GRAVE!",e.target.error.name);
+	        //some type of error handler
+	    }
+	 
+	    request.onsuccess = function(e) {
+	        console.log("Se agregó "+taskName+" con éxito!");
+	    }
+    } else {
+    	console.log("ERROR: No se ha ingresado un nombre de Tarea");
+    }   
 }
 
 
 /* Operaciones de Lectura */
 function getAllTasks(e) {
  
-    var s = "";
+    var s = "<section data-type=\"list\"><ul>";
  
     db.transaction(["tasks"], "readonly").objectStore("tasks").openCursor().onsuccess = function(e) {
         var cursor = e.target.result;
         if(cursor) {
-            s += "<h2>Key "+cursor.key+"</h2><p>";
-            for(var field in cursor.value) {
-                s+= field+"="+cursor.value[field]+"<br/>";
-            }
-            s+="</p>";
+        	var fecha = cursor.value.taskDate.toLocaleDateString();
+        	var hora = cursor.value.taskDate.toLocaleTimeString();
+            s += "<li><p>" + cursor.value.taskName + "</p>";
+            s += "<p>[ " + fecha + " | " + hora + " ]";
+            if (cursor.value.taskNotes) {
+            	s += " " + cursor.value.taskNotes;	
+            }            
+            s += "</p></li>";
+            console.log("Tarea Cargada",cursor.value.taskName);
             cursor.continue();
-        }
+        }       
         document.querySelector("#task-list").innerHTML = s;
     }
 }

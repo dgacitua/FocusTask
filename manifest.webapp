@@ -1,10 +1,10 @@
 {
   "name": "FocusTask",
-  "description": "FocusTask es una aplicación para Firefox OS que te ayudará a mantenerte concentrado en tus objetivos e informado de tus tareas",
+  "description": "FocusTask es una aplicación que te ayudará a mantenerte concentrado en tus objetivos e informado de tus tareas",
   "launch_path": "/app.html",
   "icons": {
-    "128":"/images/app_icon_128.png",
     "256":"/images/app_icon_256.png",
+    "128":"/images/app_icon_128.png",
     "64":"/images/app_icon_64.png",
     "60":"/images/app_icon_60.png",
     "48":"/images/app_icon_48.png",
@@ -18,6 +18,9 @@
   "permissions": {
     "desktop-notification": {
       "description": "Para mostrar alertas de Pomodoro"
+    },
+    "storage": {
+      "description": "Para poder guardar las Tareas en la base de datos interna del programa"
     }
   },
   "default_locale": "es"

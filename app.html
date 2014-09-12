@@ -316,7 +316,7 @@
 						<h2>Estado de la Tarea</h2>
 					</header>
 					<p>
-						<select id="status">
+						<select id="status" requied>
 							<option value="todo">Por Hacer</option>
 							<option value="doing">Realizando</option>
 							<option value="done">Terminada</option>
@@ -333,14 +333,23 @@
 		</section>
 
 		<!-- GaciX -->
-		<section class="skin-dark" role="region" id="viewtask" data-position="right">
+		<section class="skin-dark vbox fit" role="region" id="viewtask" data-position="right">
 			<header class="fixed">
 				<a id="btn-viewtask-back" href="#"><span class="icon icon-back">back</span></a>
 				<h1>Ver Tareas Actuales</h1>
 			</header>
 
-			<article class="content scrollable header">
-				<div id="task-list"></div>
+			<article class="content scrollable header fit">
+				<div id="task-container">
+					<!-- <div id="task-tabs">
+						<ul role="tablist" class="bb-tablist" data-type="filter">
+							<li id="filter-todo" role="presentation"><a href="#filter-todo" role="tab">Por Hacer</a></li>
+							<li id="filter-doing" role="presentation"><a href="#filter-doing" role="tab">Realizando</a></li>
+							<li id="filter-done" role="presentation"><a href="#filter-done" role="tab">Terminada</a></li>
+						</ul>
+					</div> -->
+					<div id="task-list"></div>
+				</div>
 			</article>
 		</section>
 
