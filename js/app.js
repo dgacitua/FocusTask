@@ -16,12 +16,10 @@ document.querySelector('#btn-viewtask').addEventListener ('click', function () {
   document.querySelector('[data-position="current"]').className = 'left';
 });
 document.querySelector('#btn-about').addEventListener ('click', function () {
-	console.log("asdf1");
   document.querySelector('#about').className = 'current';
   document.querySelector('[data-position="current"]').className = 'left';
 });
 document.querySelector('#btn-help').addEventListener ('click', function () {
-	console.log("asdf2");
   document.querySelector('#help').className = 'current';
   document.querySelector('[data-position="current"]').className = 'left';
 });
