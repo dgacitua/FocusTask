@@ -3,10 +3,10 @@ document.querySelector('#btn-pomo').addEventListener ('click', function () {
   document.querySelector('#pomo').className = 'current';
   document.querySelector('[data-position="current"]').className = 'left';
 });
-/* document.querySelector('#btn-task').addEventListener ('click', function () {
+document.querySelector('#btn-task').addEventListener ('click', function () {
   document.querySelector('#task').className = 'current';
   document.querySelector('[data-position="current"]').className = 'left';
-}); */
+});
 document.querySelector('#btn-newtask').addEventListener ('click', function () {
   document.querySelector('#newtask').className = 'current';
   document.querySelector('[data-position="current"]').className = 'left';
