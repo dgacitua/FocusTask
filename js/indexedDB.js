@@ -100,7 +100,7 @@ function getAllTasks(e) {
             	s += "<p>" + cursor.value.taskNotes + "</p>";
             }            
             s += "</li>";
-            //console.log("Tarea Cargada! " + cursor.value.taskName);
+            console.log("Tarea Cargada! " + cursor.value.taskName);
             cursor.continue();
         }
         //div.innerHTML = s;

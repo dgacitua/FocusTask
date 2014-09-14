@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="style/status.css">
 		<link rel="stylesheet" href="style/switches.css">
 		<link rel="stylesheet" href="style/drawer.css">
+		<link rel="stylesheet" href="style/layout.css">
 		<link rel="stylesheet" href="style/lists.css">
 		<link rel="stylesheet" href="style/progress_activity.css">
 		<link rel="stylesheet" href="style/scrolling.css">
@@ -32,7 +33,9 @@
 		<!-- Util CSS: some extra tricks -->
 		<link rel="stylesheet" href="util.css">
 		<!-- Additional markup to make Building Blocks kind of cross browser -->
-		<!--link rel="stylesheet" href="cross_browser.css"-->
+		<link rel="stylesheet" href="cross_browser.css">
+		<!-- Custom CSS for FocusTask -->
+		<link rel="stylesheet" href="tasklist.css">
 		<style>
 			#index {
 				height: 100%;
@@ -185,7 +188,6 @@
 				/* Whatever needs to be changed on landscape */
 			}
 		</style>
-		<link rel="stylesheet" href="style/layout.css">
 	</head>
 	<body>
 		<section id="index" data-position="current">
@@ -332,7 +334,7 @@
 		</section>
 
 		<!-- GaciX -->
-		<section class="skin-dark vbox fit" role="region" id="viewtask" data-position="right">
+		<section class="skin-dark" role="region" id="viewtask" data-position="right">
 			<header>
 				<a id="btn-viewtask-back" href="#"><span class="icon icon-back">back</span></a>
 				<h1>Ver Tareas Actuales</h1>
@@ -346,18 +348,24 @@
 			</section>
 			-->
 			
-			<ul role="tablist" class="bb-tablist" data-type="filter">
-  				<li id="filter1" role="presentation">
+			<ul role="tablist" class="bb-tablist">
+  				<li id="filtertodo" role="presentation">
   					<a id="tab1" href="#filtertodo" role="tab" aria-controls="panel1">Por Hacer</a>
-  					<div id="panel1" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab1">1</div>
+  					<div id="panel1" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab1">
+  						<section class="gaia-list fit scrollable sticky header customlist">
+	  						<article>
+								<ul id="tasklist"></ul>
+							</article>
+						</section>
+  					</div>
   				</li>
-  				<li id="filter2" role="presentation">
+  				<li id="filterdoing" role="presentation">
   					<a id="tab2" href="#filterdoing" role="tab" aria-controls="panel2">Realizando</a>
-  					<div id="panel2" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab2">2</div>
+  					<div id="panel2" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab2">holi2</div>
 				</li>
-  				<li id="filter3" role="presentation">
-  					<a id="tab3" href="#filtertodo" role="tab" aria-controls="panel3">Terminada</a>
-  					<div id="panel3" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab3">3</div>
+  				<li id="filterdone" role="presentation">
+  					<a id="tab3" href="#filterdone" role="tab" aria-controls="panel3">Terminada</a>
+  					<div id="panel3" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab3">holi3</div>
 				</li>
 			</ul>
 		</section>
