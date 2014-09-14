@@ -185,6 +185,7 @@
 				/* Whatever needs to be changed on landscape */
 			}
 		</style>
+		<link rel="stylesheet" href="style/layout.css">
 	</head>
 	<body>
 		<section id="index" data-position="current">
@@ -308,9 +309,7 @@
 					</header>
 					<p>
 						<input id="name" type="text" required>
-						<button type="reset">
-							Clear
-						</button>
+						<button type="reset">Limpiar</button>
 					</p>
 					<header>
 						<h2>Estado de la Tarea</h2>
@@ -334,23 +333,42 @@
 
 		<!-- GaciX -->
 		<section class="skin-dark vbox fit" role="region" id="viewtask" data-position="right">
-			<header class="fixed">
+			<header>
 				<a id="btn-viewtask-back" href="#"><span class="icon icon-back">back</span></a>
 				<h1>Ver Tareas Actuales</h1>
 			</header>
 
-			<article class="content scrollable header fit">
-				<div id="task-container">
-					<!-- <div id="task-tabs">
-						<ul role="tablist" class="bb-tablist" data-type="filter">
-							<li id="filter-todo" role="presentation"><a href="#filter-todo" role="tab">Por Hacer</a></li>
-							<li id="filter-doing" role="presentation"><a href="#filter-doing" role="tab">Realizando</a></li>
-							<li id="filter-done" role="presentation"><a href="#filter-done" role="tab">Terminada</a></li>
-						</ul>
-					</div> -->
-					<div id="task-list"></div>
-				</div>
-			</article>
+			<section class="gaia-list fit scroll sticky">
+				<article>
+					<ul id="tasklist"></ul>
+				</article>
+			</section>
+			
+			<ul role="tablist" class="bottom bb-tablist" data-type="filter">
+  				<li id="filtertodo" role="presentation"><a href="#filter1-1" role="tab">Por Hacer</a></li>
+  				<li id="filterdoing" role="presentation"><a href="#filter1-2" role="tab">Realizando</a></li>
+  				<li id="filterdone" role="presentation"><a href="#filter1-3" role="tab">Terminada</a></li>
+			</ul>
+			<!--<ul role="tablist" class="bottom bb-tablist" data-type="filter">
+  				<li id="filtertodo" role="presentation"><a href="#filter1-1" role="tab">Por Hacer</a></li>
+  				<li id="filterdoing" role="presentation"><a href="#filter1-2" role="tab">Realizando</a></li>
+  				<li id="filterdone" role="presentation"><a href="#filter1-3" role="tab">Terminada</a></li>
+			</ul>-->
+			
+			<!--<ul role="tablist" class="bb-tablist">
+  				<li id="panel1" role="presentation" class="bottom">
+	    			<a id="tab1" href="#panel1" data-icon="contacts" role="tab" aria-controls="tabpanel1">Por Hacer</a>
+	    			<div id="tabpanel1" class="bb-tabpanel bottom" role="tabpanel" aria-labelledby="tab1">Tab Panel 1</div>
+				</li>
+				<li id="panel2" role="presentation" class="bottom">
+	    			<a id="tab2" href="#panel2" data-icon="contacts" role="tab" aria-controls="tabpanel2">Haciendo</a>
+	    			<div id="tabpanel2" class="bb-tabpanel bottom" role="tabpanel" aria-labelledby="tab2">Tab Panel 1</div>
+				</li>
+				<li id="panel3" role="presentation" class="bottom">
+	    			<a id="tab3" href="#panel3" data-icon="contacts" role="tab" aria-controls="tabpanel3">Terminada</a>
+	    			<div id="tabpanel2" class="bb-tabpanel bottom" role="tabpanel" aria-labelledby="tab3">Tab Panel 1</div>
+				</li>
+			</ul>-->
 		</section>
 
 		<!-- GaciX -->

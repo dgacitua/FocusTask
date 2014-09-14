@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
  
     openRequest.onsuccess = function(e) {
-        console.log("openRequest completada con éxito");
+        console.log("ÉXITO! La Base de Datos ha sido cargada");
  
         db = e.target.result;
  
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
  
     openRequest.onerror = function(e) {
         //Do something for the error
-        console.log("Hay un error con openRequest");
+        console.log("ERROR GRAVE! No se pudo abrir la Base de Datos");
     }
  
 },false);
@@ -70,38 +70,41 @@ function addTask(e) {
     	request = store.add(taskEntry);
 	    
 	    request.onerror = function(e) {
-	        console.log("¡ERROR GRAVE!",e.target.error.name);
+	        console.log("ERROR GRAVE! " + e.target.error.name);
 	        //some type of error handler
 	    }
 	 
 	    request.onsuccess = function(e) {
-	        console.log("Se agregó "+taskName+" con éxito!");
+	        console.log("Se agregó "+taskName+" con éxito a la DB!");
 	    }
     } else {
-    	console.log("ERROR: No se ha ingresado un nombre de Tarea");
+    	console.log("ERROR! No se ha ingresado un nombre a la Tarea");
     }   
 }
 
 
 /* Operaciones de Lectura */
 function getAllTasks(e) {
- 
-    var s = "<section data-type=\"list\"><ul>";
- 
+    var s = "";
     db.transaction(["tasks"], "readonly").objectStore("tasks").openCursor().onsuccess = function(e) {
         var cursor = e.target.result;
+        //var div = document.createElement('div');
+        //div.className = 'row';
         if(cursor) {
-        	var fecha = cursor.value.taskDate.toLocaleDateString();
-        	var hora = cursor.value.taskDate.toLocaleTimeString();
-            s += "<li><p>" + cursor.value.taskName + "</p>";
-            s += "<p>[ " + fecha + " | " + hora + " ]";
+        	var localDate = cursor.value.taskDate.toLocaleDateString();
+        	var localTime = cursor.value.taskDate.toLocaleTimeString();
+            s += "<li class=\"vbox\"><p>" + cursor.value.taskName + "</p>";
+            s += "<p>" + localDate + "</p>";
+            s += "<p>" + localTime + "</p>";
             if (cursor.value.taskNotes) {
-            	s += " " + cursor.value.taskNotes;	
+            	s += "<p>" + cursor.value.taskNotes + "</p>";
             }            
-            s += "</p></li>";
-            console.log("Tarea Cargada",cursor.value.taskName);
+            s += "</li>";
+            //console.log("Tarea Cargada! " + cursor.value.taskName);
             cursor.continue();
-        }       
-        document.querySelector("#task-list").innerHTML = s;
+        }
+        //div.innerHTML = s;
+        //document.getElementById('tasklist').appendChild(div);      
+        document.querySelector("#tasklist").innerHTML = s;
     }
 }
