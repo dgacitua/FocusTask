@@ -21,8 +21,6 @@
 		<link rel="stylesheet" href="style/seekbars.css">
 		<link rel="stylesheet" href="style/tabs.css">
 		<link rel="stylesheet" href="style/toolbars.css">
-		<!-- Clock -->
-		<link rel="stylesheet" href="style/clock.css">
 		<!-- Icons -->
 		<link rel="stylesheet" href="icons/styles/action_icons.css">
 		<link rel="stylesheet" href="icons/styles/media_icons.css">
@@ -35,7 +33,8 @@
 		<!-- Additional markup to make Building Blocks kind of cross browser -->
 		<link rel="stylesheet" href="cross_browser.css">
 		<!-- Custom CSS for FocusTask -->
-		<link rel="stylesheet" href="tasklist.css">
+		<link rel="stylesheet" href="custom/clock.css">
+		<link rel="stylesheet" href="custom/tasklist.css">
 		<style>
 			#index {
 				height: 100%;
@@ -189,7 +188,7 @@
 			}
 		</style>
 	</head>
-	<body>
+	<body class="bodyfix">
 		<section id="index" data-position="current">
 			<section data-type="sidebar">
 				<header>
@@ -334,25 +333,17 @@
 		</section>
 
 		<!-- GaciX -->
-		<section class="skin-dark" role="region" id="viewtask" data-position="right">
-			<header>
+		<section class="skin-dark vbox fit" role="region" id="viewtask" data-position="right">
+			<header class="fixed">
 				<a id="btn-viewtask-back" href="#"><span class="icon icon-back">back</span></a>
 				<h1>Ver Tareas Actuales</h1>
 			</header>
-			
-			<!--
-			<section class="gaia-list fit scroll sticky">
-				<article>
-					<ul id="tasklist"></ul>
-				</article>
-			</section>
-			-->
 			
 			<ul role="tablist" class="bb-tablist">
   				<li id="filtertodo" role="presentation">
   					<a id="tab1" href="#filtertodo" role="tab" aria-controls="panel1">Por Hacer</a>
   					<div id="panel1" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab1">
-  						<section class="gaia-list fit scrollable sticky header customlist">
+  						<section class="gaia-list fit sticky tasklist">
 	  						<article>
 								<ul id="tasklist"></ul>
 							</article>
@@ -361,11 +352,19 @@
   				</li>
   				<li id="filterdoing" role="presentation">
   					<a id="tab2" href="#filterdoing" role="tab" aria-controls="panel2">Realizando</a>
-  					<div id="panel2" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab2">holi2</div>
+  					<div id="panel2" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab2">
+  						<section class="fit tasklist">
+  							<p>holi2</p>
+  						</section>
+					</div>
 				</li>
   				<li id="filterdone" role="presentation">
   					<a id="tab3" href="#filterdone" role="tab" aria-controls="panel3">Terminada</a>
-  					<div id="panel3" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab3">holi3</div>
+  					<div id="panel3" class="bb-tabpanel tasklist" role="tabpanel" aria-labelledby="tab3">
+  						<section class="tasklist">
+  							holi3
+  						</section>
+  					</div>
 				</li>
 			</ul>
 		</section>

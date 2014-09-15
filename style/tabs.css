@@ -135,7 +135,7 @@
   width: 100%;
   left: 0;
   top:0;
-  height: calc(100% - 0.3rem);
+  /* height: calc(100% - 0.3rem); */
   border-bottom: 0.3rem solid #00aacc;
 }
 
