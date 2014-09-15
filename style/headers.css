@@ -151,7 +151,8 @@ section[role="region"] > header:first-child h1 {
 
 section[role="region"] > header:first-child a,
 section[role="region"] > header:first-child button {
-  color: rgba(0,0,0,0.6);
+  /* color: rgba(0,0,0,0.6); */
+  color: rgba(256, 256, 256, 0.95);
 }
 
 section[role="region"] > header:first-child a:active,
